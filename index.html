@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>debug tech inc</title>
+    <link rel="stylesheet" href="C:\Users\rf\Desktop\project\pages\bootstrap-4.3.1\bootstrap-4.3.1\dist\css\bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-9/chHLTCcBULgxOFoUyZXSgEF0uFXs+NrQqzcy/DXqcR+Sk8C1l4EgmUXAEzTb92" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <style>
+        body{
+            font-size: 2em;
+            background: rgb(251, 253, 229);
+        }
+        hr{
+            display: inline-flex;
+            width: 10%;
+            margin-left: 20px;
+        }
+        .jumbotron{
+            background-image: url('C:/Users/rf/Desktop/debug/img/fut img1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50vh;
+        }
+        .col-md-4{
+            font-size: 30px;
+            height: 10%;
+            background: white;
+            font-weight: 600;
+        }
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="./js/lineChart.js"></script>
+    <script src="./js/index.js"></script>
+</head>
+<body style="font-family: sans-seif;">
+    <div id="root">
+        <div id="display" class="container">
+            <div id="country" class="text-center">
+                
+            </div>
+            <div class="row">
+                <div id='death' class="col-md-4 rounded shadow-sm text-danger">
+                    <span class="badge-danger text.danger">Total Deaths</span>
+                </div>
+                <div id='confirmed' class="col-md-4 rounded shadow-sm text-primary">
+                    <span class="badge-primary text.primary">Total Cases</span>
+                </div>
+                <div id="recovered" class="col-md-4 rounded shadow-sm text-success">
+                    <span class="badge-success text.success">Recovered Cases</span>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="curve_chart" style="width: 900px; height: 500px"></div>
+        </div>
+    </div>
+</body>
+</html>

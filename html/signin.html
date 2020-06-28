@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>covid-19</title>
+    <link rel="icon" href="C:\Users\rf\Downloads\covidimg1.jpg"/>
+    <link rel="stylesheet" href="C:\Users\rf\Desktop\project\pages\bootstrap-4.3.1\bootstrap-4.3.1\dist\css\bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="covidstyles.css" />
+    <link rel="stylesheet" href="login.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="root">
+        <header>
+            <div class="nav">
+                <div class="container">
+                    <div class="badge">
+                        <img id="logo" src="C:\Users\rf\Downloads\covidimg1.jpg" alt="logo">
+                    </div>
+                    <div id="links">
+                        <a href="covid-19.html">home</a>
+                        <a href="signin.html">sign in</a>
+                        <a href="login.html">login</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div id="bkg"></div>
+                <div class="overlay">
+                    <i class="large material-icons">account_circle</i>
+                    <!-- <img src="" alt="login image"> -->
+                </div>
+                <div class="jumbotron" style="position: relative; width: 100%;">
+                    <form action="validate.js" method="POST" style="z-index: 2; width: 80%; margin-top: 7%; margin-right: 0;">
+                        <input type="text" name="full_name" placeholder="full name" autofocus>
+                        <input type="email" name="email" placeholder="email address">
+                        <input type="phone" name="phone_no" placeholder="mobile number">
+                        <input type="text" name="home_address" placeholder="permanent home address">
+                        <input type="text" name="city" placeholder="city">
+                        <input type="text" name="state" placeholder="state">
+                        <input type="text" name="nationality" placeholder="nationality">
+                        <label for="religion">religion</label><br>
+                        <input type="radio" name="religion" value="christain">Christain
+                        <input type="radio" name="religion" value="islam">Islam<br>
+                        <label for="birth-date">date of birth</label><br><input type="date" name="birth_date">
+                        <label for="gender">gender</label><br><input type="radio" name="gender" value="male">male
+                        <input type="radio" name="gender" value="female">female
+
+                        <input type="password" name="password" placeholder="password">
+                        <input type="password" name="confirm_password" placeholder="confirm password">
+                        
+                        <a href="#" id="singin_btn" class=" btn-primary" style="margin-top: 20px;" role="button">signin</a>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var sigin_btn = $("#singin_btn").click(function(e){
+                e.preventDefault;
+                var inputs = document.querySelectorAll('input');
+                var inputsArray = Array.from(inputs);
+                // Array.from(inputs).forEach(element =>{
+                for(let i = 0; i <= inputsArray.length; i++){
+                    if(inputsArray[i].value == ""){
+                        alert('no input field should be empty');
+                        
+                    }else{
+                        alert('user successfully created');
+                        break;
+                        
+                    }
+
+                }
+                
+                
+            });
+        });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

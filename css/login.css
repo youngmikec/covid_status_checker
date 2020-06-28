@@ -1,0 +1,51 @@
+body{
+    background-color: rgba(2, 2, 71, 1)
+}
+
+input{
+    display: block;
+    border: none;
+    border-bottom: 1px solid grey;
+    width: 40%;
+    margin: 2em 0em 2em 15em;
+    padding: 1em 2em;
+}
+header .container{
+    display: flex;
+}
+.badge{
+    flex: 1;
+}
+#links{
+    flex: 3;
+}
+#logo{
+    width: 10%;
+}
+a{
+    color: white;
+    margin-top: 20px;
+    margin-right: 50px;
+    text-decoration: none;
+}
+.container{
+    margin-top: 5em;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    top: 1%;
+    left: 47%;
+    z-index: 1;
+    margin-bottom: 2em;
+}
+i{
+    background: white;
+    color:  rgb(4,4,74);
+    /* border: 1px 
+    solid white; */
+    border-radius: 100%;
+}
+form a{
+    margin-left: 50%;
+}
