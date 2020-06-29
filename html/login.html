@@ -10,42 +10,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="covidstyles.css" />
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="root">
         <header>
-            <div class="nav">
-                <div class="container">
+            <div class="navbar navbar-default">
+                <div class="container-fluid">
                     <div class="badge">
                         <img id="logo" src="C:\Users\rf\Downloads\covidimg1.jpg" alt="logo">
                     </div>
-                    <div id="links">
-                        <a href="covid-19.html">home</a>
-                        <a href="signin.html">sign in</a>
-                        <a href="login.html">login</a>
+                    <div id="links" class="text-right">
+                        <a href="covid-19.html" class="nav-links">home</a>
+                        <a href="signin.html" class="nav-links">sign in</a>
+                        <a href="login.html" class="nav-links">login</a>
                     </div>
                 </div>
             </div>
         </header>
         <main>
-            <div id="boxcover" style="width: 300px; height: 50px; position: relative; background: transparent;">
+            <!-- <div id="boxcover" style="width: 300px; height: 50px; position: relative; background: transparent;">
                 <div id="box" style="width: 50px; height: 20px; background: blue; position: absolute;" ></div>
-            </div>
-
+            </div> -->
+            <br>
+            <br>
             <div class="container">
                 <div id="bkg"></div>
                 <div class="overlay">
                     <i class="large material-icons">account_circle</i>
                     <!-- <img src="" alt="login image"> -->
                 </div>
-                <div class="jumbotron" style="position: relative; width: 100%;">
-                    <form action="validate.js" method="POST" style="z-index: 2; width: 80%; margin-top: 7%; margin-right: 0;">
-                        <input id="name"type="text" name="username" placeholder="username" autofocus>
-                        <input id="pswd" type="password" name="password" placeholder="password">
+                <div class="container shadow-lg rounded p-5 bg-light">
+                    <form action="validate.js" method="POST" style="z-index: 2; width: 80%; padding-top: 12%; margin: auto;">
+                        <div class="form-group-lg">
+                            <input id="name" class="form-control"
+                            type="text" name="username" placeholder="username" autofocus>
+                        </div>
+
+                        <div class="form-group-lg">
+                            <input id="pswd" class="form-control"
+                             type="password" name="password" placeholder="password">
+                        </div>
                         <a href="#" style="color: grey; margin-left: 20%;">forgot password?</a>
-                        <a  id="login" href="#" class=" btn-primary" role="button">login</a>
+                        <a  id="login" href="#" class="btn btn-primary" role="button">login</a>
                     </form>
                 </div>
             </div>
@@ -70,11 +78,11 @@
             //             box.style.left = position + "px";
             //             box.style.borderRadius = "50%";
             //             position ++;
-                        
+
             //         }
             //     }
             // });
-        
+
 
 
             $(function(){
@@ -105,7 +113,7 @@
                                     alert('username and password does not match');
                                 }
                             });
-                        
+
                         };
                         function isEmpty(obj){
                             console.log(obj);
@@ -115,16 +123,16 @@
                                 alert('all input fields must be filled');
                             }else{
                                 validate(obj);
-                                return obj
+                                return obj;
                             }
                             return;
                         }
                         isEmpty(obj);
-                        
+
                     }
-                    
+
                 }
-    
+
                 var login_btn = $("#login").click(function(){
                     var username = document.querySelector('#name').value;
                     var userpass = document.querySelector('#pswd').value;
@@ -133,8 +141,7 @@
                 });
 
             });
-
-
+            
 
 
         </script>
